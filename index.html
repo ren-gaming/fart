@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a2e;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+        }
+        #fart-btn {
+            padding: 40px 80px;
+            font-size: 48px;
+            font-weight: bold;
+            color: #fff;
+            background: #6b8c42;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 10px 40px rgba(107, 140, 66, 0.4);
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        #fart-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(107, 140, 66, 0.6);
+            background: #8ab85a;
+        }
+        #fart-btn:active {
+            transform: translateY(2px) scale(0.98);
+            box-shadow: 0 5px 20px rgba(107, 140, 66, 0.3);
+        }
+        .subtitle {
+            margin-top: 20px;
+            color: #888;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="container">
+        <button id="fart-btn" onclick="playFart()">FART</button>
+        <p class="subtitle">Click the button</p>
+    </div>
+
+    <audio id="fart-audio" src="fart.mp3" preload="auto"></audio>
+
+    <script>
+        function playFart() {
+            const audio = document.getElementById('fart-audio');
+            audio.currentTime = 0;
+            audio.play();
+        }
+    </script>
+</body>
+</html>
